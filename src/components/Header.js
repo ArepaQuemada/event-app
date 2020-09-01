@@ -22,15 +22,15 @@ export default function Header() {
 
     return (
         <div>
-            <AppBar color="secondary">
+            <AppBar color="primary">
                 <Toolbar className={classes.root}>
                     <Typography variant="h4" className={classes.title}>
                         Incredible Event
                 </Typography>
                     <div>
-                        <Button color="inherit" className={classes.button}>About</Button>
-                        <Button color="inherit" className={classes.button}>Food</Button>
-                        <Button color="inherit" className={classes.button}>Contact</Button>
+                        <Button color="secondary" className={classes.button}>About</Button>
+                        <Button color="secondary" className={classes.button}>Food</Button>
+                        <Button color="secondary" className={classes.button}>Contact</Button>
                     </div>
                 </Toolbar>
             </AppBar>
