@@ -23,6 +23,9 @@ export default function Speakers({ speakers }) {
         return (
             <>
                 <Container maxWidth="md">
+                    <Typography variant="h4" align="center">
+                        Meet our speakers
+                    </Typography>
                     <Grid container spacing={4} className={classes.root}>
                         {speakers.map((speaker, index) => {
                             return (
@@ -34,8 +37,8 @@ export default function Speakers({ speakers }) {
                                                 image={speaker.profilePicture}
                                             />
                                             <CardContent className={classes.cardContent}>
-                                                <Typography variant="h5" align="center">
-                                                    {speaker.firstName}
+                                                <Typography variant="h6" align="center">
+                                                    {`${speaker.firstName} ${speaker.lastName}`}
                                                 </Typography>
                                             </CardContent>
                                         </CardActionArea>
