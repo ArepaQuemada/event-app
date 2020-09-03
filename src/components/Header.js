@@ -3,7 +3,6 @@ import { AppBar, Typography, Toolbar, Button, makeStyles } from '@material-ui/co
 
 const useStyles = makeStyles(theme => ({
     root: {
-        padding: '30px',
         [theme.breakpoints.down('xs')]: {
             flexDirection: 'column',
         }
@@ -22,7 +21,7 @@ export default function Header() {
 
     return (
         <div>
-            <AppBar color="primary">
+            <AppBar color="primary" position="static">
                 <Toolbar className={classes.root}>
                     <Typography variant="h4" className={classes.title}>
                         Incredible Event
