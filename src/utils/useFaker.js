@@ -24,6 +24,6 @@ export default function useFaker(numberOfFakes) {
             return fakePeople;
         }
         setFaketData(createData());
-    }, []);
+    }, [numberOfFakes]);
     return fakerData;
 }

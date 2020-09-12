@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { FakerContext } from '../App';
 import { Container, Card, CardContent, CardMedia, Typography, Grid, makeStyles, CardActionArea, Box } from '@material-ui/core';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import FacebookIcon from '@material-ui/icons/Facebook';
@@ -33,8 +34,9 @@ const useStyles = makeStyles((theme) => ({
     }
 }))
 
-export default function Speakers({ speakers }) {
+export default function Speakers() {
     const classes = useStyles();
+    const speakers = useContext(FakerContext)
     if (speakers) {
         return (
             <>
@@ -47,7 +49,7 @@ export default function Speakers({ speakers }) {
                     <Grid container spacing={4} className={classes.root}>
                         {speakers.map((speaker, index) => {
                             return (
-                                <Grid item xs={6} sm={4} md={3}>
+                                <Grid item xs={6} sm={4} md={3} key={index}>
                                     <Card key={index}>
                                         <CardActionArea>
                                             <CardMedia
@@ -56,7 +58,7 @@ export default function Speakers({ speakers }) {
                                             />
                                             <CardContent className={classes.cardContent}>
                                                 <Box width="100%" fontWeight="bold" textAlign="center" fontSize="17px">
-                                                    <Typography variant="h7" align="center">
+                                                    <Typography variant="h6" align="center">
                                                         {`${speaker.firstName} ${speaker.lastName}`}
                                                     </Typography>
                                                 </Box>

@@ -1,5 +1,7 @@
 import React from 'react';
 import { Container, makeStyles, Box, Typography, Button } from '@material-ui/core';
+import InfoNav from './InfoNav';
+import Speakers from './Speakers';
 import conferenceImg600 from '../assets/img/conference-600.jpg'
 import conferenceImg1900 from '../assets/img/conference-1900.jpg'
 import conferenceImg2400 from '../assets/img/conference-2400.jpg'
@@ -55,27 +57,31 @@ export default function Home() {
     const classes = useStyles();
 
     return (
-        <Box textAlign="center" className={classes.root}>
-            <Container className={classes.container} maxWidth="sm" id="container">
-                <div className={classes.innerContainer}>
-                    <Typography variant="h3">
-                        An event that will blow your mind
+        <Container disableGutters maxWidth={false}>
+            <Box textAlign="center" className={classes.root}>
+                <Container className={classes.container} maxWidth="sm" id="container">
+                    <div className={classes.innerContainer}>
+                        <Typography variant="h3">
+                            An event that will blow your mind
                     </Typography>
-                    <Box className={classes.quote}>
-                        <Typography>
-                            "Some random dude trying to improve his web development skills"
+                        <Box className={classes.quote}>
+                            <Typography>
+                                "Some random dude trying to improve his web development skills"
                         </Typography>
-                        <Typography>
-                            "- A Random Dude Indeed"
+                            <Typography>
+                                "- A Random Dude Indeed"
                         </Typography>
-                    </Box>
-                    <Button color="secondary" variant="contained" size="large" className={classes.button}>
-                        <Typography variant="button"> 
-                            Buy tickets
+                        </Box>
+                        <Button color="secondary" variant="contained" size="large" className={classes.button}>
+                            <Typography variant="button">
+                                Buy tickets
                         </Typography>
-                    </Button>
-                </div>
-            </Container>
-        </Box>
+                        </Button>
+                    </div>
+                </Container>
+            </Box>
+            <InfoNav />
+            <Speakers />
+        </Container>
     )
 }
