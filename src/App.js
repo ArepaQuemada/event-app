@@ -4,6 +4,7 @@ import Home from './components/Home';
 import Speakers from './components/Speakers';
 import useFaker from './utils/useFaker';
 import InfoNav from './components/InfoNav';
+import Footer from './components/Footer';
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
       <Home/>
       <InfoNav />
       <Speakers speakers={fakeData} />
+      <Footer />
     </div>
   );
 }
