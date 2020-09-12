@@ -15,7 +15,9 @@ export default function useFaker(numberOfFakes) {
                         phone: faker.phone,
                         email: faker.email
                     },
-                    profilePicture: faker.image.avatar()
+                    profilePicture: faker.image.avatar(),
+                    profession: faker.name.jobType(),
+                    professionDescription: faker.name.jobDescriptor()
                 }
                 fakePeople.push(person);
             }

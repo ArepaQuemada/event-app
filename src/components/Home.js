@@ -35,17 +35,18 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
-        opacity: '0.7',
         '&:hover': {
-            opacity: '1.0',
+            opacity: '0.8',
         }
     },
     innerContainer: {
         border: '1px solid white',
         padding: '20px',
+        backgroundColor: 'rgb(103, 103, 103, 0.3)',
+        background: 'transparent',
     },
     quote: {
-        textAlign: 'end'
+        textAlign: 'end',
     }
 }))
 
@@ -58,17 +59,21 @@ export default function Home() {
             <Container className={classes.container} maxWidth="sm" id="container">
                 <div className={classes.innerContainer}>
                     <Typography variant="h3">
-                        An event that will blow your mind 
+                        An event that will blow your mind
                     </Typography>
-                    <div className={classes.quote}>
+                    <Box className={classes.quote}>
                         <Typography>
                             "Some random dude trying to improve his web development skills"
                         </Typography>
                         <Typography>
                             "- A Random Dude Indeed"
                         </Typography>
-                    </div>
-                    <Button color="secondary" variant="contained" size="large" className={classes.button}>Buy tickets</Button>
+                    </Box>
+                    <Button color="secondary" variant="contained" size="large" className={classes.button}>
+                        <Typography variant="button"> 
+                            Buy tickets
+                        </Typography>
+                    </Button>
                 </div>
             </Container>
         </Box>
